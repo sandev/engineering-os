@@ -1,11 +1,11 @@
 ---
 name: decision-making
-description: Make and drive good decisions under uncertainty — clarifying the decision, who owns it, how reversible it is, and how to move forward without stalling. Use when a team is stuck, a choice has unclear ownership, a group can't reach consensus, or you need to decide with incomplete information.
+description: Make and drive good decisions under uncertainty, clarifying the decision, who owns it, how reversible it is, and how to move forward without stalling. Use when a team is stuck, a choice has unclear ownership, a group can't reach consensus, or you need to decide with incomplete information.
 ---
 
 # Decision-Making
 
-Most organizational drag is not bad decisions — it's *undecided* decisions: choices that stall because no one owns them, everyone waits for certainty that never comes, or the group confuses consensus with progress. The skill is deciding well *and* at the right speed, then committing.
+Most organizational drag is not bad decisions, it's *undecided* decisions: choices that stall because no one owns them, everyone waits for certainty that never comes, or the group confuses consensus with progress. The skill is deciding well *and* at the right speed, then committing.
 
 ## Match speed to reversibility
 
@@ -22,7 +22,7 @@ Stalled decisions are usually unclear decisions. Pin down:
 
 - **What exactly are we deciding?** State it as one question with a date.
 - **Who owns it?** One accountable decision-maker (a **DACI/RACI** driver), not "the group." Consensus is a nice-to-have, not a requirement.
-- **What would change our mind?** The information or threshold that resolves it — so you know when you have enough.
+- **What would change our mind?** The information or threshold that resolves it, so you know when you have enough.
 - **What's the default** if we don't decide? (Often worse than either option.)
 
 ## Decide with incomplete information
@@ -36,7 +36,7 @@ You will rarely have certainty; waiting for it is itself a (bad) decision.
 
 ## Disagree and commit
 
-Consensus is not required; **alignment after the decision** is. Solicit dissent *before* deciding — actively invite the strongest counter-argument — then, once the owner decides, everyone commits and executes as if it were their own, even those who disagreed. Re-litigating a made decision in the hallways is corrosive.
+Consensus is not required; **alignment after the decision** is. Solicit dissent *before* deciding (actively invite the strongest counter-argument) then, once the owner decides, everyone commits and executes as if it were their own, even those who disagreed. Re-litigating a made decision in the hallways is corrosive.
 
 ## Write it down
 
@@ -45,7 +45,7 @@ Record what was decided, by whom, why, the alternatives, and what would trigger 
 ## Anti-patterns
 
 - Treating reversible decisions as if they were irreversible (analysis paralysis).
-- No clear owner — the decision belongs to "the group" and so to no one.
+- No clear owner, the decision belongs to "the group" and so to no one.
 - Waiting for certainty that will never arrive.
 - Requiring consensus, then getting the lowest-common-denominator choice.
 - Deciding by loudest voice or seniority rather than reasoning and evidence.

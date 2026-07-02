@@ -1,7 +1,7 @@
 # Contributing
 
-Thanks for helping improve **engineering-os**. Contributions — new skills,
-sharper edits, fixes — are welcome.
+Thanks for helping improve **engineering-os**. Contributions, new skills,
+sharper edits, fixes, are welcome.
 
 The full guide (skill format, quality bar, and the branch → PR → merge flow)
 lives in **[AGENTS.md](AGENTS.md)**. Start there. The short version:

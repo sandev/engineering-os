@@ -5,7 +5,7 @@ description: Design reliable LLM and agent-based systems, including tool design,
 
 # Agentic System Design
 
-LLM systems fail differently from deterministic software: they are non-deterministic, degrade silently, and fail plausibly. Design for that reality. The discipline that separates a demo from a production agent is **evaluation, guardrails, and scoping** — not prompt cleverness.
+LLM systems fail differently from deterministic software: they are non-deterministic, degrade silently, and fail plausibly. Design for that reality. The discipline that separates a demo from a production agent is **evaluation, guardrails, and scoping**: not prompt cleverness.
 
 ## First principle: start with the narrowest useful scope
 
@@ -35,7 +35,7 @@ Reach for a fully autonomous loop only when the task genuinely requires open-end
 
 The context window is a scarce, expensive resource. Curate it.
 
-- Put only what the model needs for *this* step. More context is not better — it dilutes attention and raises cost.
+- Put only what the model needs for *this* step. More context is not better, it dilutes attention and raises cost.
 - For retrieval (RAG): the failure is usually **retrieval quality**, not the model. Measure recall of your retriever independently. Chunk deliberately, include citations, and prefer fewer high-relevance passages.
 - Manage long-running state with summaries/scratchpads rather than replaying full history.
 - Treat everything retrieved or user-supplied as **untrusted** (see guardrails).
@@ -51,7 +51,7 @@ Tools are the agent's API to the world. Design them like a public API.
 
 ## Guardrails
 
-- **Input:** validate and constrain user/tool input. Defend against prompt injection — never let retrieved or user text silently override system instructions. Untrusted content must not be able to escalate the agent's privileges.
+- **Input:** validate and constrain user/tool input. Defend against prompt injection, never let retrieved or user text silently override system instructions. Untrusted content must not be able to escalate the agent's privileges.
 - **Output:** validate structure (schema), check for policy violations, and constrain side effects. Do not let raw model output trigger irreversible actions without a check.
 - **Authorization:** the agent should act with the *user's* permissions, not the system's. Enforce authz at the tool boundary, not in the prompt.
 - **Data governance:** know what leaves your boundary. Classify inputs and keep PII or regulated data out of prompts sent to third-party model providers unless the provider, contract, and data-retention terms allow it.
@@ -64,20 +64,20 @@ Assume every model call and tool call can fail or return garbage.
 - Deterministic fallback when confidence is low or a step fails repeatedly (a default response, a simpler path, or a human).
 - Design an explicit **human handoff** for cases the agent cannot or should not handle.
 
-## Evaluation — the core discipline
+## Evaluation, the core discipline
 
 You cannot improve what you cannot measure, and you cannot measure an LLM system with vibes.
 
 1. **Build an eval set early.** Collect representative inputs with known-good outcomes. Grow it from real failures.
 2. **Choose metrics that match the task:** exact-match/schema-valid for structured output; task-success rate for agents; retrieval recall for RAG; rubric-based LLM-as-judge for open-ended text (validated against human labels).
-3. **Run evals in CI.** Treat a prompt or model change like a code change — gate it on the eval suite.
+3. **Run evals in CI.** Treat a prompt or model change like a code change, gate it on the eval suite.
 4. **Watch for regressions** when changing models, prompts, or tools; small changes can shift behavior broadly.
 
 ## Observability
 
 Log the full trace for every request: system prompt, retrieved context, each tool call and result, the model's intermediate decisions, tokens, latency, and cost. When an agent misbehaves in production, the trace is the only way to understand why. (The general practice is in the `observability-and-slos` skill.)
 
-**Pin and record versions.** Record which model and prompt version served each request. Providers deprecate and silently update models, so you need to correlate any behavior shift to a version — and reproduce it.
+**Pin and record versions.** Record which model and prompt version served each request. Providers deprecate and silently update models, so you need to correlate any behavior shift to a version, and reproduce it.
 
 ## Anti-patterns
 

@@ -31,9 +31,9 @@ An API is a contract and a one-way door: once others depend on it, changing it i
 ## Contracts & correctness
 
 - **Explicit schemas.** Define request and response shapes precisely (types, required fields, formats). Validate input at the boundary and reject clearly.
-- **Idempotency.** Make retries safe — use idempotency keys or PUT-style semantics for mutations, so a client that times out and retries doesn't double-charge or double-create.
+- **Idempotency.** Make retries safe, use idempotency keys or PUT-style semantics for mutations, so a client that times out and retries doesn't double-charge or double-create.
 - **Pagination by default.** Any collection that can grow must be paged (prefer cursor-based over offset for stability). Never return unbounded lists.
-- **Time, money, and IDs:** use unambiguous types — ISO-8601 with timezone, integer minor units or decimal strings for currency, opaque string IDs (don't leak sequential internals).
+- **Time, money, and IDs:** use unambiguous types, ISO-8601 with timezone, integer minor units or decimal strings for currency, opaque string IDs (don't leak sequential internals).
 
 ## Errors
 
@@ -47,7 +47,7 @@ Callers program against your errors as much as your successes.
 
 APIs change; plan for it so you never have to break callers:
 
-- **Additive changes are safe** (new optional fields, new endpoints). **Removing or renaming fields, tightening validation, or changing semantics are breaking** — treat them as a new version.
+- **Additive changes are safe** (new optional fields, new endpoints). **Removing or renaming fields, tightening validation, or changing semantics are breaking**: treat them as a new version.
 - Decide the versioning approach up front (URL version, header, or content negotiation) and be consistent.
 - Never repurpose an existing field's meaning. Clients tolerate new fields; they break on changed ones.
 - Have a **deprecation path**: announce, provide a migration window and overlap, measure remaining usage, then remove. Record one-way-door choices as an ADR (see the `architecture-decision-records` skill).

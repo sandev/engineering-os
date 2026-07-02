@@ -9,7 +9,7 @@ Executives are time-poor, context-rich in business but not in your system, and a
 
 ## The one rule: BLUF (Bottom Line Up Front)
 
-Lead with the conclusion, the ask, or the headline — then support it. Never make the reader dig for the point.
+Lead with the conclusion, the ask, or the headline, then support it. Never make the reader dig for the point.
 
 <example>
 Bad (buries the point):
@@ -29,12 +29,12 @@ to start. Details below."
 **Ask / headline:** the single thing you want them to know or decide.
 
 **Why it matters (business terms):** impact on revenue, risk, cost, customers,
-or timeline — not implementation detail.
+or timeline, not implementation detail.
 
 **Options & recommendation:** if a decision is needed, 2-3 options with the
 trade-off in one line each, and your recommendation.
 
-**What I need:** the specific decision, resource, or unblock — and by when.
+**What I need:** the specific decision, resource, or unblock, and by when.
 
 **Details / appendix:** the technical depth, for those who want it. Optional
 reading, clearly marked.

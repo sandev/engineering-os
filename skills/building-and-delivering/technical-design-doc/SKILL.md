@@ -5,7 +5,7 @@ description: Write a technical design document (RFC) that frames a problem, pres
 
 # Technical Design Doc (RFC)
 
-A design doc exists to **think before building** and to **get aligned** with reviewers. Its value is in the problem framing and the options analysis — not in describing the solution you already picked. If the answer is obvious, you may not need a doc; if it is not, the doc is where the disagreement gets resolved cheaply, on paper.
+A design doc exists to **think before building** and to **get aligned** with reviewers. Its value is in the problem framing and the options analysis, not in describing the solution you already picked. If the answer is obvious, you may not need a doc; if it is not, the doc is where the disagreement gets resolved cheaply, on paper.
 
 ## When to write one
 
@@ -45,7 +45,7 @@ deadlines, budget, and constraints (existing systems, team, compliance).
 ## 5. Proposed solution
 The recommended approach, at a level a reviewer can evaluate. Diagrams for
 data flow and components. Data model and API/contract changes. Enough
-detail to find the hard parts — not every line of code.
+detail to find the hard parts, not every line of code.
 
 ## 6. Alternatives considered
 Two or more real alternatives, each with pros, cons, and why it was not
@@ -62,12 +62,12 @@ external systems this depends on (and whether they are committed).
 ## 9. Rollout & cost of the work
 Phases, feature flags, migration steps, and how you will know it worked.
 Include a rough effort/timeline estimate so the work can be funded and
-sequenced — reviewers approving this are also approving its cost.
+sequenced, reviewers approving this are also approving its cost.
 ```
 
 ## Quality bar
 
-- The **summary** stands alone — a busy reviewer or exec understands the decision from it.
+- The **summary** stands alone, a busy reviewer or exec understands the decision from it.
 - **Goals are measurable** and **non-goals are explicit.**
 - At least one credible **alternative** is analyzed, not strawmanned.
 - **Failure modes, rollback, and observability** are addressed, not deferred.

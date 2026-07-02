@@ -1,0 +1,9 @@
+# Code owners for engineering-os.
+# Listed owners are automatically requested for review and — with branch
+# protection's "require review from Code Owners" enabled — are mandatory
+# reviewers before a pull request can be merged into main.
+#
+# Order matters: the last matching pattern for a path wins.
+
+# Default: the maintainer reviews every change.
+*       @sandev

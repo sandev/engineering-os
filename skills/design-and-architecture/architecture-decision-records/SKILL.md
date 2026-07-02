@@ -9,7 +9,7 @@ An ADR is a short document that captures one significant architectural decision,
 
 ## When to write one
 
-Use the **one-way vs two-way door** test. One-way doors (costly or near-impossible to reverse) deserve an ADR and careful deliberation; two-way doors (cheaply reversible) usually do not — decide fast and move on. Write an ADR for a decision that is **significant** and **hard to reverse**:
+Use the **one-way vs two-way door** test. One-way doors (costly or near-impossible to reverse) deserve an ADR and careful deliberation; two-way doors (cheaply reversible) usually do not, decide fast and move on. Write an ADR for a decision that is **significant** and **hard to reverse**:
 
 - Choosing a datastore, queue, or core framework
 - A public API contract or cross-service boundary

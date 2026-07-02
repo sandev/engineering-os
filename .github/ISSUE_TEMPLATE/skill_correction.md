@@ -1,7 +1,7 @@
 ---
 name: Correction or improvement
 about: Report guidance that's wrong, unclear, outdated, or missing an anti-pattern
-title: "fix: <skill> — <short summary>"
+title: "fix: <skill>, <short summary>"
 labels: [correction]
 ---
 

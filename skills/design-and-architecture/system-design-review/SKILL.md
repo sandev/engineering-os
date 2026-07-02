@@ -22,14 +22,14 @@ Walk each dimension. For each, note strengths, risks, and concrete questions.
 
 ### 1. Correctness & data model
 - Is the data model right? Entities, relationships, ownership.
-- Source of truth for each piece of data — is it single and clear?
+- Source of truth for each piece of data, is it single and clear?
 - Consistency model: strong vs eventual, and does that match the requirement?
 
 ### 2. Scalability
 - Back-of-envelope capacity check: does the math work? (QPS × payload → bandwidth; writes/day → storage growth; peak vs average, not just totals.)
 - Where is the bottleneck as load grows 10x? (usually a stateful component)
 - Read vs write scaling. Caching strategy and invalidation.
-- Partitioning/sharding key — does it avoid hotspots?
+- Partitioning/sharding key, does it avoid hotspots?
 - Statelessness of services for horizontal scaling.
 
 ### 3. Reliability & availability
@@ -44,7 +44,7 @@ Walk each dimension. For each, note strengths, risks, and concrete questions.
 - Data classification: what is sensitive? Encryption in transit and at rest.
 - Input validation and trust boundaries. Secrets management.
 - Compliance/data-residency constraints.
-- Data lifecycle: retention, deletion, and right-to-be-forgotten — can you actually delete a user's data everywhere it landed (caches, backups, logs, analytics)?
+- Data lifecycle: retention, deletion, and right-to-be-forgotten, can you actually delete a user's data everywhere it landed (caches, backups, logs, analytics)?
 
 ### 5. Operability
 - Observability: metrics, structured logs, traces, and the SLOs that matter.
@@ -65,12 +65,12 @@ Walk each dimension. For each, note strengths, risks, and concrete questions.
 
 Organize findings by severity so the author knows what blocks progress:
 
-- **Blocking** — will fail a stated requirement or cause data loss/outage. Must resolve.
-- **Major** — significant risk or cost; resolve or consciously accept before build.
-- **Minor** — improvement or simplification; author's discretion.
-- **Question** — unclear; needs an answer before it can be assessed.
+- **Blocking**: will fail a stated requirement or cause data loss/outage. Must resolve.
+- **Major**: significant risk or cost; resolve or consciously accept before build.
+- **Minor**: improvement or simplification; author's discretion.
+- **Question**: unclear; needs an answer before it can be assessed.
 
-For each finding, name the dimension, the specific concern, and a suggested direction — not just "this is wrong."
+For each finding, name the dimension, the specific concern, and a suggested direction, not just "this is wrong."
 
 ## Anti-patterns to flag
 

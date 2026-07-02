@@ -3,20 +3,39 @@
 [![Validate skills](https://github.com/sandev/engineering-os/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/sandev/engineering-os/actions/workflows/validate-skills.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Battle-tested engineering playbooks you can read in five minutes — or hand to an
-AI agent to do the work well.
+Engineering OS is a curated collection of battle-tested playbooks, architecture
+patterns, leadership principles, and practical guides for engineers, architects,
+engineering managers, and technology leaders.
+
+The goal isn't to document everything.
+
+It's to capture what repeatedly works.
 
 Each playbook is a plain-markdown **skill**: a focused, opinionated guide for one
-recurring engineering task, with a checklist, a template, and the anti-patterns
-to avoid. They cover software architecture, AI and agentic systems, product
-engineering, and technical leadership.
+recurring task, with a checklist, a template, and the anti-patterns to avoid. It
+reads in five minutes, or you can hand it to any LLM to do the work well.
 
-No framework, no signup, no lock-in. It's just markdown that works for a person
-reading it or any LLM you paste it into.
+## Philosophy
+
+- **Principles over frameworks**
+- **Playbooks over documentation**
+- **Systems thinking over buzzwords**
+- **Practicality over theory**
+
+## Vision
+
+Engineering OS aims to become the engineering equivalent of:
+
+- The System Design Primer
+- The Phoenix Project
+- Google's SRE Book
+
+…updated for the era of AI agents, LLMs, robotics, and modern engineering
+organizations.
 
 ## The skills
 
-Grouped by what you're doing — each group is a subfolder of `skills/`.
+Grouped by what you're doing. Each group is a subfolder of `skills/`.
 
 ### Design & architecture
 
@@ -66,9 +85,9 @@ Grouped by what you're doing — each group is a subfolder of `skills/`.
 | Skill | Use it when you need to… |
 |-------|--------------------------|
 | [feedback-and-1-1s](skills/leading-people-and-teams/feedback-and-1-1s/SKILL.md) | Give clear, kind feedback and run 1:1s that build trust and growth |
-| [delegation](skills/leading-people-and-teams/delegation/SKILL.md) | Hand off work so it's done well and people grow — without micromanaging |
+| [delegation](skills/leading-people-and-teams/delegation/SKILL.md) | Hand off work so it's done well and people grow, without micromanaging |
 | [interviewing](skills/leading-people-and-teams/interviewing/SKILL.md) | Run structured interviews that produce real hiring signal, fairly |
-| [running-effective-meetings](skills/leading-people-and-teams/running-effective-meetings/SKILL.md) | Run a meeting (all-hands, decision, review) that's worth the time — or skip it |
+| [running-effective-meetings](skills/leading-people-and-teams/running-effective-meetings/SKILL.md) | Run a meeting (all-hands, decision, review) that's worth the time, or skip it |
 | [agile-ceremonies](skills/leading-people-and-teams/agile-ceremonies/SKILL.md) | Make standups, planning, demos, and retros create value, not ritual |
 
 ## How to use it
@@ -81,7 +100,7 @@ Pick whatever fits how you work:
   for that task.
 - **Cursor:** run `ln -s ../skills .cursor/skills` once, then the skills
   auto-load and asking *"review this system design"* pulls in the right one.
-- **Claude / Agent Skills tools:** point them at the `skills/` folder — the
+- **Claude / Agent Skills tools:** point them at the `skills/` folder; the
   frontmatter format matches.
 - **Your own agent:** index `skills/`, route on each skill's `description`, load
   the match into context.
@@ -101,16 +120,16 @@ cd engineering-os
 - **Isn't:** a tutorial for a specific language, tool, or vendor. The advice is
   meant to outlive any given stack.
 
-If a skill ever reads like filler or a product pitch, that's a bug — open an issue or PR.
+If a skill ever reads like filler or a product pitch, that's a bug. Open an issue or PR.
 
 ## Contributing
 
 New skills and sharper edits are both welcome. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for the quick path and
 [AGENTS.md](AGENTS.md) for the full format, quality bar, and workflow. Please
-be a good neighbor — we follow a [Code of Conduct](CODE_OF_CONDUCT.md). To
+be a good neighbor: we follow a [Code of Conduct](CODE_OF_CONDUCT.md). To
 report a security concern, see [SECURITY.md](SECURITY.md).
 
 ## License
 
-[MIT](LICENSE) — use it, adapt it, share it.
+[MIT](LICENSE). Use it, adapt it, share it.

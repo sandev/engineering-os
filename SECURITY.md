@@ -1,13 +1,13 @@
 # Security Policy
 
-**engineering-os** is a library of markdown playbooks — it ships no runtime
+**engineering-os** is a library of markdown playbooks, it ships no runtime
 software or executables that run on your machine, aside from
 `scripts/validate_skills.sh` (used for validation in CI). The realistic security
 concerns are therefore about the repository and its guidance itself.
 
 ## Reporting a vulnerability
 
-If you find any of the following, please report it **privately** — do not open a
+If you find any of the following, please report it **privately**: do not open a
 public issue:
 
 - A way the repository, its CI workflow, or `scripts/validate_skills.sh` could be
@@ -16,7 +16,7 @@ public issue:
   security vulnerability if followed).
 
 **How to report:** use GitHub's private vulnerability reporting on this
-repository — **Security → Report a vulnerability** (Security Advisories). If that
+repository, **Security → Report a vulnerability** (Security Advisories). If that
 is unavailable to you, contact the maintainer through their GitHub profile.
 
 Please include what you found, where, and why it's a concern. We aim to

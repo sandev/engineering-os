@@ -5,18 +5,18 @@ description: Run a production incident and write a blameless postmortem that fin
 
 # Incident Response & Postmortem
 
-Two jobs: **stop the bleeding** during the incident, then **learn** without blame afterward. The measure of a healthy engineering org is not zero incidents — it is how much it learns from each one.
+Two jobs: **stop the bleeding** during the incident, then **learn** without blame afterward. The measure of a healthy engineering org is not zero incidents, it is how much it learns from each one.
 
-## Part 1 — During the incident
+## Part 1, During the incident
 
 Priority order is fixed: **mitigate first, diagnose second.** Restoring service beats understanding root cause in the moment.
 
 ### Severity (set one from customer impact, not cause)
-- **SEV1** — critical: major outage or data loss, broad customer impact. All-hands, leadership notified immediately.
-- **SEV2** — significant: partial outage or serious degradation; urgent but contained.
-- **SEV3** — minor: limited or cosmetic impact; handle in normal hours.
+- **SEV1**: critical: major outage or data loss, broad customer impact. All-hands, leadership notified immediately.
+- **SEV2**: significant: partial outage or serious degradation; urgent but contained.
+- **SEV3**: minor: limited or cosmetic impact; handle in normal hours.
 
-When unsure, over-declare — you can always downgrade. Severity drives the response, not blame.
+When unsure, over-declare, you can always downgrade. Severity drives the response, not blame.
 
 ### Roles (assign explicitly, even for a team of two)
 - **Incident Commander (IC):** owns decisions and coordination. Not the person with hands on keyboard.
@@ -28,13 +28,13 @@ When unsure, over-declare — you can always downgrade. Severity drives the resp
 - [ ] Declare the incident; assign IC. Set a severity.
 - [ ] Open a single coordination channel; all activity goes there.
 - [ ] Assess impact: who/what is affected, since when, how badly.
-- [ ] Mitigate: roll back, fail over, disable the feature, scale up — buy stability.
+- [ ] Mitigate: roll back, fail over, disable the feature, scale up, buy stability.
 - [ ] Communicate on a fixed cadence, even with "no change yet."
 - [ ] Once stable, confirm recovery with data, then stand down.
 - [ ] Preserve evidence (logs, dashboards, timeline) for the postmortem.
 ```
 
-Good telemetry is what makes detection fast and root cause findable — see the `observability-and-slos` skill; for the diagnosis itself, see the `debugging` skill.
+Good telemetry is what makes detection fast and root cause findable, see the `observability-and-slos` skill; for the diagnosis itself, see the `debugging` skill.
 
 ### Principles
 - **Mitigate with the fastest safe lever** (usually rollback) before hunting root cause.
@@ -42,7 +42,7 @@ Good telemetry is what makes detection fast and root cause findable — see the 
 - **Change one thing at a time** and observe; panic-changing multiple variables hides what worked.
 - **Over-communicate.** Silence during an outage erodes trust faster than bad news.
 
-## Part 2 — The postmortem (blameless)
+## Part 2, The postmortem (blameless)
 
 Write one for every significant incident, within a few days while memory is fresh.
 
@@ -61,21 +61,21 @@ Focus on **systems and conditions**, not individuals. "An engineer ran the migra
 A few sentences: what broke, the impact, and how it was resolved.
 
 ## Timeline (UTC)
-- HH:MM — trigger / first symptom
-- HH:MM — detected (how? alert or human?)
-- HH:MM — key actions and what they did
-- HH:MM — mitigated
-- HH:MM — fully resolved
+- HH:MM, trigger / first symptom
+- HH:MM, detected (how? alert or human?)
+- HH:MM, key actions and what they did
+- HH:MM, mitigated
+- HH:MM, fully resolved
 
 ## Impact
 Quantified: duration, users, requests, data, money.
 
 ## Root cause analysis
 The chain of contributing causes. Ask "why" until you reach systemic
-factors, not a person. Usually several causes combine — capture all.
+factors, not a person. Usually several causes combine, capture all.
 
 ## What went well / what was hard
-Detection, response, tooling, communication — honestly.
+Detection, response, tooling, communication, honestly.
 
 ## Action items
 | Action | Type (prevent/detect/mitigate) | Owner | Due |
@@ -86,7 +86,7 @@ Each item is specific, owned, dated, and tracked to completion.
 ### Quality bar
 - Root cause reaches a **systemic** factor (process, tooling, design gap), not "human made a mistake."
 - **Detection** is examined: did we find it, or did a customer? How fast?
-- Action items are **concrete, owned, dated, and tracked** — a postmortem whose actions are never done is theater.
+- Action items are **concrete, owned, dated, and tracked**: a postmortem whose actions are never done is theater.
 - Prefer actions that **prevent the class** of failure, not just this one instance.
 - Tone stays blameless throughout.
 

@@ -1,12 +1,12 @@
 # Contributing to engineering-os
 
-**engineering-os** is a library of engineering playbooks — for software
+**engineering-os** is a library of engineering playbooks for software
 architecture, AI and agentic systems, product engineering, and technical
 leadership. Each playbook is a plain-markdown **skill** that a human can read in
 a few minutes and that an LLM or coding agent can load to do the work well.
 
 This file is also the entry point agents read for repo conventions (the
-[`AGENTS.md`](https://agents.md) convention). It works with any tool — Cursor,
+[`AGENTS.md`](https://agents.md) convention). It works with any tool: Cursor,
 Claude, ChatGPT, Copilot, a homegrown agent, or no tool at all.
 
 ---
@@ -18,10 +18,10 @@ git clone https://github.com/sandev/engineering-os.git
 cd engineering-os
 ```
 
-1. **Browse** [`skills/`](skills/) — each folder is one skill, one `SKILL.md`.
+1. **Browse** [`skills/`](skills/), each folder is one skill, one `SKILL.md`.
 2. **Read one** end to end, e.g. `skills/building-and-delivering/code-review/SKILL.md`, to feel the style.
 3. **Use it** (see [Using these skills](#using-these-skills) below).
-4. **Contribute** — copy the template, fill it in, open a PR.
+4. **Contribute**: copy the template, fill it in, open a PR.
 
 No build, no dependencies. It's just markdown.
 
@@ -45,7 +45,7 @@ The format is deliberately portable. Pick whatever matches your tool:
 - **Humans:** just read the file. Each one is a self-contained playbook with a
   checklist or template you can follow directly.
 
-The only hard dependency is the ability to read a markdown file — nothing is
+The only hard dependency is the ability to read a markdown file, nothing is
 tied to a specific vendor.
 
 ---
@@ -54,7 +54,7 @@ tied to a specific vendor.
 
 ```
 engineering-os/
-├── AGENTS.md                     # you are here — contributor + usage guide
+├── AGENTS.md                     # you are here, contributor + usage guide
 ├── README.md                     # what this is + the skill catalog
 ├── LICENSE
 ├── scripts/
@@ -96,10 +96,10 @@ engineering-os/
 ```
 
 Each skill lives at `skills/<group>/<name>/SKILL.md`. The group folder is
-organizational only — a skill is still identified by its own `<name>`, which
+organizational only, a skill is still identified by its own `<name>`, which
 must match its innermost folder.
 
-> The repo is vendor-neutral — there are no tool-specific files. Cursor users can
+> The repo is vendor-neutral, there are no tool-specific files. Cursor users can
 > opt in with a single symlink (see [Using these skills](#using-these-skills)).
 
 Each skill is a directory with a required `SKILL.md`, plus optional
@@ -112,17 +112,17 @@ shouldn't carry inline.
 
 The bar is high because this library is used broadly. A good skill is:
 
-- **Durable** — principles and judgment that stay true across years and stacks,
+- **Durable**: principles and judgment that stay true across years and stacks,
   not a tutorial for this week's tool.
-- **Actionable** — the reader finishes knowing *what to do*, with a checklist,
-  template, and quality bar — not just theory.
-- **Opinionated** — takes a clear stance and names anti-patterns. A skill that
+- **Actionable**: the reader finishes knowing *what to do*, with a checklist,
+  template, and quality bar, not just theory.
+- **Opinionated**: takes a clear stance and names anti-patterns. A skill that
   says "it depends" everywhere teaches nothing.
-- **Tool-neutral** — no vendor-specific instructions in the skill body. Guidance
+- **Tool-neutral**: no vendor-specific instructions in the skill body. Guidance
   should apply whether the reader is a person or any agent.
-- **Concise** — earns every line. Keep `SKILL.md` under ~500 lines; push deep
+- **Concise**: earns every line. Keep `SKILL.md` under ~500 lines; push deep
   material into a linked `reference.md`.
-- **Non-overlapping** — extend or cross-link an existing skill instead of
+- **Non-overlapping**: extend or cross-link an existing skill instead of
   duplicating it.
 
 If it reads like a vendor doc or a blog post, it isn't ready.
@@ -136,7 +136,7 @@ Every skill is a `SKILL.md` with YAML frontmatter and a markdown body.
 ```markdown
 ---
 name: your-skill-name
-description: What the skill does AND when to use it, in the third person. This is how a tool or reader decides to load it — be specific and include trigger terms.
+description: What the skill does AND when to use it, in the third person. This is how a tool or reader decides to load it, be specific and include trigger terms.
 ---
 
 # Your Skill Name
@@ -160,22 +160,22 @@ What to avoid, and why.
 | `description` | Non-empty, max 1024 chars. Third person. State **what** it does and **when** to use it, with trigger terms. |
 
 Keep the frontmatter to these two fields so it stays portable across tools. The
-`description` is the most important line — it's what makes the skill
+`description` is the most important line, it's what makes the skill
 discoverable. Write it like the existing skills: `"<what it does>. Use when
 <trigger scenarios>."`
 
 ### Writing guidance
 
-- **Third person** in the description ("Reviews code…") — many tools inject it
+- **Third person** in the description ("Reviews code…"), many tools inject it
   into a system prompt.
 - **Assume a smart reader.** Add only what they wouldn't already know; cut
   generic background.
 - **Prefer checklists, templates, and tables** over prose.
-- **Show, don't tell** — include a concrete example and a bad-vs-good contrast
+- **Show, don't tell**: include a concrete example and a bad-vs-good contrast
   where it helps.
 - **No tool-specific or time-sensitive content** ("in Cursor…", "as of 2026…").
   If something is deprecated, put it in an "old patterns" section.
-- **Consistent terminology** — one term per concept, used throughout.
+- **Consistent terminology**: one term per concept, used throughout.
 - **Cross-link** related skills by name (e.g. "see the
   `architecture-decision-records` skill").
 
@@ -195,7 +195,7 @@ discoverable. Write it like the existing skills: `"<what it does>. Use when
 
 ## Editing an existing skill
 
-Improvements are very welcome — sharper checklists, better examples, a missing
+Improvements are very welcome, sharper checklists, better examples, a missing
 anti-pattern. Keep edits in the established voice and structure. If you're
 changing the *meaning* of guidance (not just clarifying), explain the reasoning
 in your PR so reviewers can weigh it.
@@ -204,7 +204,7 @@ in your PR so reviewers can weigh it.
 
 ## Submitting a change (branch → PR → merge)
 
-We don't commit to `main` directly — every change goes through a PR so it gets
+We don't commit to `main` directly, every change goes through a PR so it gets
 review and passes CI.
 
 ```bash
@@ -236,7 +236,7 @@ local run means a green CI. Merge once CI passes and a reviewer approves.
 
 **PR description:** state what the skill/change is, who it's for, and why the
 guidance is sound (experience, sources, or precedent). We review for accuracy,
-clarity, and durability — the same bar as the skills themselves.
+clarity, and durability, the same bar as the skills themselves.
 
 ---
 
@@ -246,4 +246,4 @@ Reviewers optimize for the person or agent who will rely on this in a real
 decision. We merge changes that are correct, concise, and genuinely useful, and
 push back on anything vague, redundant, or vendor-specific. Disagreement is
 settled on the merits, in the open, in the PR. Be kind, be specific, attack the
-text not the author — the standards in the `code-review` skill apply to us too.
+text not the author, the standards in the `code-review` skill apply to us too.

@@ -68,18 +68,22 @@ engineering-os/
     ├── system-design-review/
     ├── api-design/
     ├── security-threat-modeling/
+    ├── data-modeling/
+    ├── caching-strategy/
     ├── agentic-system-design/
     ├── technical-design-doc/
     ├── estimation-and-planning/
     ├── testing-strategy/
     ├── code-review/
     ├── debugging/
+    ├── technical-writing/
     ├── observability-and-slos/
     ├── incident-postmortem/
     ├── technical-strategy/
     ├── decision-making/
     ├── writing-for-executives/
     ├── feedback-and-1-1s/
+    ├── delegation/
     └── interviewing/
 ```
 

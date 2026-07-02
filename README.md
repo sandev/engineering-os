@@ -22,18 +22,22 @@ reading it or any LLM you paste it into.
 | [system-design-review](skills/system-design-review/SKILL.md) | Pressure-test a system design before you build it |
 | [api-design](skills/api-design/SKILL.md) | Design or review an API/contract that's clear and hard to misuse |
 | [security-threat-modeling](skills/security-threat-modeling/SKILL.md) | Find what could go wrong security-wise before attackers do |
+| [data-modeling](skills/data-modeling/SKILL.md) | Design a schema that fits access patterns and stays correct at scale |
+| [caching-strategy](skills/caching-strategy/SKILL.md) | Add caching that speeds things up without serving stale or wrong data |
 | [agentic-system-design](skills/agentic-system-design/SKILL.md) | Build an LLM/agent feature that's actually reliable, not just a demo |
 | [technical-design-doc](skills/technical-design-doc/SKILL.md) | Plan a non-trivial project and get aligned (RFC / design doc) |
 | [estimation-and-planning](skills/estimation-and-planning/SKILL.md) | Size work honestly and turn it into a credible, sequenced plan |
 | [testing-strategy](skills/testing-strategy/SKILL.md) | Decide what to test and at which level so tests catch real defects |
 | [code-review](skills/code-review/SKILL.md) | Review a pull request with high signal and less nitpicking |
 | [debugging](skills/debugging/SKILL.md) | Find a bug's root cause systematically instead of guessing |
+| [technical-writing](skills/technical-writing/SKILL.md) | Write docs and READMEs organized around what the reader needs to do |
 | [observability-and-slos](skills/observability-and-slos/SKILL.md) | Instrument a system and set reliability targets that alert on real user pain |
 | [incident-postmortem](skills/incident-postmortem/SKILL.md) | Run an incident and write a blameless postmortem that sticks |
 | [technical-strategy](skills/technical-strategy/SKILL.md) | Set technical direction and decide what to build, fix, or defer |
 | [decision-making](skills/decision-making/SKILL.md) | Make and drive a decision under uncertainty without stalling |
 | [writing-for-executives](skills/writing-for-executives/SKILL.md) | Explain a technical decision to leadership without losing them |
 | [feedback-and-1-1s](skills/feedback-and-1-1s/SKILL.md) | Give clear, kind feedback and run 1:1s that build trust and growth |
+| [delegation](skills/delegation/SKILL.md) | Hand off work so it's done well and people grow — without micromanaging |
 | [interviewing](skills/interviewing/SKILL.md) | Run structured interviews that produce real hiring signal, fairly |
 
 ## How to use it

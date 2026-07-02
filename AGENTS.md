@@ -19,7 +19,7 @@ cd engineering-os
 ```
 
 1. **Browse** [`skills/`](skills/) — each folder is one skill, one `SKILL.md`.
-2. **Read one** end to end, e.g. `skills/code-review/SKILL.md`, to feel the style.
+2. **Read one** end to end, e.g. `skills/building-and-delivering/code-review/SKILL.md`, to feel the style.
 3. **Use it** (see [Using these skills](#using-these-skills) below).
 4. **Contribute** — copy the template, fill it in, open a PR.
 
@@ -62,35 +62,42 @@ engineering-os/
 ├── .github/
 │   ├── workflows/validate-skills.yml
 │   └── pull_request_template.md
-└── skills/                       # the library (tool-neutral source of truth)
-    ├── architecture-decision-records/   # design & architecture
-    │   └── SKILL.md
-    ├── system-design-review/
-    ├── api-design/
-    ├── data-modeling/
-    ├── caching-strategy/
-    ├── security-threat-modeling/
-    ├── agentic-system-design/           # AI & agentic systems
-    ├── technical-design-doc/            # building & delivering
-    ├── estimation-and-planning/
-    ├── testing-strategy/
-    ├── code-review/
-    ├── debugging/
-    ├── technical-writing/
-    ├── observability-and-slos/          # operating & reliability
-    ├── incident-postmortem/
-    ├── technical-strategy/              # strategy & communication
-    ├── decision-making/
-    ├── writing-for-executives/
-    ├── feedback-and-1-1s/               # leading people & teams
-    ├── delegation/
-    ├── interviewing/
-    ├── running-effective-meetings/
-    └── agile-ceremonies/
-
-The groups above are a reading aid only; the directory is flat (one folder per
-skill) so tools discover each `skills/<name>/SKILL.md` directly.
+└── skills/                       # the library, grouped by category
+    ├── design-and-architecture/
+    │   ├── architecture-decision-records/
+    │   │   └── SKILL.md
+    │   ├── system-design-review/
+    │   ├── api-design/
+    │   ├── data-modeling/
+    │   ├── caching-strategy/
+    │   └── security-threat-modeling/
+    ├── ai-and-agentic-systems/
+    │   └── agentic-system-design/
+    ├── building-and-delivering/
+    │   ├── technical-design-doc/
+    │   ├── estimation-and-planning/
+    │   ├── testing-strategy/
+    │   ├── code-review/
+    │   ├── debugging/
+    │   └── technical-writing/
+    ├── operating-and-reliability/
+    │   ├── observability-and-slos/
+    │   └── incident-postmortem/
+    ├── strategy-and-communication/
+    │   ├── technical-strategy/
+    │   ├── decision-making/
+    │   └── writing-for-executives/
+    └── leading-people-and-teams/
+        ├── feedback-and-1-1s/
+        ├── delegation/
+        ├── interviewing/
+        ├── running-effective-meetings/
+        └── agile-ceremonies/
 ```
+
+Each skill lives at `skills/<group>/<name>/SKILL.md`. The group folder is
+organizational only — a skill is still identified by its own `<name>`, which
+must match its innermost folder.
 
 > The repo is vendor-neutral — there are no tool-specific files. Cursor users can
 > opt in with a single symlink (see [Using these skills](#using-these-skills)).
@@ -178,7 +185,7 @@ discoverable. Write it like the existing skills: `"<what it does>. Use when
 
 ```
 - [ ] 1. Pick a specific, descriptive name (kebab-case). Not `helper` or `utils`.
-- [ ] 2. Create skills/<name>/SKILL.md from the template above.
+- [ ] 2. Create skills/<group>/<name>/SKILL.md from the template above (pick the fitting group).
 - [ ] 3. Write a specific, third-person description with clear WHEN triggers.
 - [ ] 4. Keep the body under ~500 lines; link a reference.md for depth.
 - [ ] 5. Add the skill to the catalog table in README.md.

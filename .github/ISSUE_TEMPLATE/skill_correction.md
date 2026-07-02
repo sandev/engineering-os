@@ -7,7 +7,7 @@ labels: [correction]
 
 ## Which skill?
 
-Path (e.g. `skills/code-review/SKILL.md`):
+Path (e.g. `skills/building-and-delivering/code-review/SKILL.md`):
 
 ## What's the issue?
 

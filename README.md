@@ -17,9 +17,12 @@ reading it or any LLM you paste it into.
 |-------|--------------------------|
 | [architecture-decision-records](skills/architecture-decision-records/SKILL.md) | Write down a big, hard-to-reverse decision so people understand it later |
 | [system-design-review](skills/system-design-review/SKILL.md) | Pressure-test a system design before you build it |
+| [api-design](skills/api-design/SKILL.md) | Design or review an API/contract that's clear and hard to misuse |
 | [agentic-system-design](skills/agentic-system-design/SKILL.md) | Build an LLM/agent feature that's actually reliable, not just a demo |
 | [technical-design-doc](skills/technical-design-doc/SKILL.md) | Plan a non-trivial project and get aligned (RFC / design doc) |
+| [estimation-and-planning](skills/estimation-and-planning/SKILL.md) | Size work honestly and turn it into a credible, sequenced plan |
 | [code-review](skills/code-review/SKILL.md) | Review a pull request with high signal and less nitpicking |
+| [observability-and-slos](skills/observability-and-slos/SKILL.md) | Instrument a system and set reliability targets that alert on real user pain |
 | [incident-postmortem](skills/incident-postmortem/SKILL.md) | Run an incident and write a blameless postmortem that sticks |
 | [technical-strategy](skills/technical-strategy/SKILL.md) | Set technical direction and decide what to build, fix, or defer |
 | [writing-for-executives](skills/writing-for-executives/SKILL.md) | Explain a technical decision to leadership without losing them |

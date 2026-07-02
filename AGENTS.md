@@ -61,9 +61,12 @@ engineering-os/
     ├── architecture-decision-records/
     │   └── SKILL.md
     ├── system-design-review/
+    ├── api-design/
     ├── agentic-system-design/
     ├── technical-design-doc/
+    ├── estimation-and-planning/
     ├── code-review/
+    ├── observability-and-slos/
     ├── incident-postmortem/
     ├── technical-strategy/
     └── writing-for-executives/

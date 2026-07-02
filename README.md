@@ -67,8 +67,11 @@ If a skill ever reads like filler or a product pitch, that's a bug — open an i
 
 ## Contributing
 
-New skills and sharper edits are both welcome. [AGENTS.md](AGENTS.md) has the
-format, the quality bar, and a five-minute path from clone to PR.
+New skills and sharper edits are both welcome. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the quick path and
+[AGENTS.md](AGENTS.md) for the full format, quality bar, and workflow. Please
+be a good neighbor — we follow a [Code of Conduct](CODE_OF_CONDUCT.md). To
+report a security concern, see [SECURITY.md](SECURITY.md).
 
 ## License
 

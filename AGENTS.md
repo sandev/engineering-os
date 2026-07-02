@@ -67,14 +67,20 @@ engineering-os/
     │   └── SKILL.md
     ├── system-design-review/
     ├── api-design/
+    ├── security-threat-modeling/
     ├── agentic-system-design/
     ├── technical-design-doc/
     ├── estimation-and-planning/
+    ├── testing-strategy/
     ├── code-review/
+    ├── debugging/
     ├── observability-and-slos/
     ├── incident-postmortem/
     ├── technical-strategy/
-    └── writing-for-executives/
+    ├── decision-making/
+    ├── writing-for-executives/
+    ├── feedback-and-1-1s/
+    └── interviewing/
 ```
 
 > The repo is vendor-neutral — there are no tool-specific files. Cursor users can

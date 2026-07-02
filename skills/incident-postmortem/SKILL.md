@@ -11,6 +11,13 @@ Two jobs: **stop the bleeding** during the incident, then **learn** without blam
 
 Priority order is fixed: **mitigate first, diagnose second.** Restoring service beats understanding root cause in the moment.
 
+### Severity (set one from customer impact, not cause)
+- **SEV1** — critical: major outage or data loss, broad customer impact. All-hands, leadership notified immediately.
+- **SEV2** — significant: partial outage or serious degradation; urgent but contained.
+- **SEV3** — minor: limited or cosmetic impact; handle in normal hours.
+
+When unsure, over-declare — you can always downgrade. Severity drives the response, not blame.
+
 ### Roles (assign explicitly, even for a team of two)
 - **Incident Commander (IC):** owns decisions and coordination. Not the person with hands on keyboard.
 - **Ops/hands-on:** investigates and applies fixes.

@@ -56,6 +56,10 @@ nit (optional): this could use `Array.prototype.at(-1)` for readability.
 - [ ] Parameterized queries / safe templating (no string-built SQL or HTML)
 - [ ] Dependencies are trusted and pinned
 
+## Resolving disagreement
+
+Don't let a PR stall for days in comment ping-pong. If author and reviewer are stuck after a round or two, switch to a synchronous conversation or escalate to a tech lead, decide, and record the reasoning in the thread. Disagreement is settled on technical merit; when it is a genuine judgment call with no clear winner, the author's decision generally stands. Approving means you share ownership of the outcome — review accordingly.
+
 ## Anti-patterns for reviewers
 
 - Bikeshedding style while missing a logic bug.

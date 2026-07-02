@@ -55,11 +55,14 @@ chosen. "Do nothing" is always a valid alternative to include.
 Security & privacy, reliability & failure modes, observability, rollout &
 migration (including rollback), cost, and testing/eval strategy.
 
-## 8. Risks & open questions
-Honest list of what could go wrong and what is still undecided.
+## 8. Risks, dependencies & open questions
+What could go wrong, what is still undecided, and which other teams or
+external systems this depends on (and whether they are committed).
 
-## 9. Rollout plan
+## 9. Rollout & cost of the work
 Phases, feature flags, migration steps, and how you will know it worked.
+Include a rough effort/timeline estimate so the work can be funded and
+sequenced — reviewers approving this are also approving its cost.
 ```
 
 ## Quality bar
@@ -68,6 +71,7 @@ Phases, feature flags, migration steps, and how you will know it worked.
 - **Goals are measurable** and **non-goals are explicit.**
 - At least one credible **alternative** is analyzed, not strawmanned.
 - **Failure modes, rollback, and observability** are addressed, not deferred.
+- **Effort, timeline, and cross-team dependencies** are stated so the work can be funded and sequenced.
 - Open questions are stated honestly rather than hidden.
 
 ## Working with reviewers

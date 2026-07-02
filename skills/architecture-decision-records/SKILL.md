@@ -9,7 +9,7 @@ An ADR is a short document that captures one significant architectural decision,
 
 ## When to write one
 
-Write an ADR for a decision that is **significant** and **hard to reverse**:
+Use the **one-way vs two-way door** test. One-way doors (costly or near-impossible to reverse) deserve an ADR and careful deliberation; two-way doors (cheaply reversible) usually do not — decide fast and move on. Write an ADR for a decision that is **significant** and **hard to reverse**:
 
 - Choosing a datastore, queue, or core framework
 - A public API contract or cross-service boundary
@@ -41,9 +41,10 @@ Use this exact structure. Keep it to one page.
 ```markdown
 # ADR-NNNN: <short decision title>
 
-- Status: Proposed | Accepted | Superseded by ADR-NNNN | Deprecated
+- Status: Proposed | Accepted | Rejected | Superseded by ADR-NNNN | Deprecated
 - Date: YYYY-MM-DD
-- Deciders: <names / roles>
+- Decision owner: <single accountable decision-maker>
+- Consulted: <others whose input shaped it>
 
 ## Context
 

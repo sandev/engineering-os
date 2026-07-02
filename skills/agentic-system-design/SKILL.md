@@ -54,6 +54,7 @@ Tools are the agent's API to the world. Design them like a public API.
 - **Input:** validate and constrain user/tool input. Defend against prompt injection — never let retrieved or user text silently override system instructions. Untrusted content must not be able to escalate the agent's privileges.
 - **Output:** validate structure (schema), check for policy violations, and constrain side effects. Do not let raw model output trigger irreversible actions without a check.
 - **Authorization:** the agent should act with the *user's* permissions, not the system's. Enforce authz at the tool boundary, not in the prompt.
+- **Data governance:** know what leaves your boundary. Classify inputs and keep PII or regulated data out of prompts sent to third-party model providers unless the provider, contract, and data-retention terms allow it.
 
 ## Failure handling
 
@@ -75,6 +76,8 @@ You cannot improve what you cannot measure, and you cannot measure an LLM system
 ## Observability
 
 Log the full trace for every request: system prompt, retrieved context, each tool call and result, the model's intermediate decisions, tokens, latency, and cost. When an agent misbehaves in production, the trace is the only way to understand why.
+
+**Pin and record versions.** Record which model and prompt version served each request. Providers deprecate and silently update models, so you need to correlate any behavior shift to a version — and reproduce it.
 
 ## Anti-patterns
 

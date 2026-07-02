@@ -26,6 +26,7 @@ Walk each dimension. For each, note strengths, risks, and concrete questions.
 - Consistency model: strong vs eventual, and does that match the requirement?
 
 ### 2. Scalability
+- Back-of-envelope capacity check: does the math work? (QPS × payload → bandwidth; writes/day → storage growth; peak vs average, not just totals.)
 - Where is the bottleneck as load grows 10x? (usually a stateful component)
 - Read vs write scaling. Caching strategy and invalidation.
 - Partitioning/sharding key — does it avoid hotspots?
@@ -42,6 +43,7 @@ Walk each dimension. For each, note strengths, risks, and concrete questions.
 - Data classification: what is sensitive? Encryption in transit and at rest.
 - Input validation and trust boundaries. Secrets management.
 - Compliance/data-residency constraints.
+- Data lifecycle: retention, deletion, and right-to-be-forgotten — can you actually delete a user's data everywhere it landed (caches, backups, logs, analytics)?
 
 ### 5. Operability
 - Observability: metrics, structured logs, traces, and the SLOs that matter.
@@ -55,6 +57,7 @@ Walk each dimension. For each, note strengths, risks, and concrete questions.
 ### 7. Simplicity & evolvability
 - Is anything more complex than the requirements justify?
 - What is the migration path from today's system?
+- Team fit (Conway's law): do the service boundaries match team boundaries, or will every change need three teams to coordinate?
 - Which decisions are one-way doors and deserve an ADR?
 
 ## Feedback format

@@ -65,6 +65,7 @@ engineering-os/
     ├── technical-design-doc/
     ├── code-review/
     ├── incident-postmortem/
+    ├── technical-strategy/
     └── writing-for-executives/
 ```
 

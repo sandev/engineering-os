@@ -44,6 +44,7 @@ reading, clearly marked.
 
 - **Translate tech into business impact.** They care about outcomes (revenue, risk, cost, speed, customer trust), not mechanisms. "Migrate to sharded Postgres" → "handle 5x growth without the outages we hit in March."
 - **Quantify.** "Slow" is an opinion; "p99 latency is 4s vs our 500ms target" is a fact. Attach numbers to problems, costs, and benefits.
+- **Make every number defensible.** Leaders probe the one figure you cannot back up, and it discredits the rest. Know your source and confidence for each; label estimates as estimates.
 - **Give a recommendation, not just options.** Leaders want your judgment. Present the choice, then say what you would do and why.
 - **Be explicit about the ask.** End with the specific decision or resource you need, and the deadline. A message with no clear ask gets no action.
 - **Surface risk honestly and early.** Bad news does not improve with age. State the risk, its likelihood/impact, and your mitigation.

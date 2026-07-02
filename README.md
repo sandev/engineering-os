@@ -21,6 +21,7 @@ reading it or any LLM you paste it into.
 | [technical-design-doc](skills/technical-design-doc/SKILL.md) | Plan a non-trivial project and get aligned (RFC / design doc) |
 | [code-review](skills/code-review/SKILL.md) | Review a pull request with high signal and less nitpicking |
 | [incident-postmortem](skills/incident-postmortem/SKILL.md) | Run an incident and write a blameless postmortem that sticks |
+| [technical-strategy](skills/technical-strategy/SKILL.md) | Set technical direction and decide what to build, fix, or defer |
 | [writing-for-executives](skills/writing-for-executives/SKILL.md) | Explain a technical decision to leadership without losing them |
 
 ## How to use it

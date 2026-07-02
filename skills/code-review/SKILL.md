@@ -13,9 +13,9 @@ Review in this order. Do not spend attention on line 4 before you have judged wh
 
 1. **Should this change exist?** Does it solve a real problem, match its design/ticket, and belong here?
 2. **Correctness.** Does it do what it claims? Edge cases, error paths, concurrency, off-by-one, null/empty, boundary conditions.
-3. **Security.** Untrusted input validated? Authz enforced? Secrets/PII handled? Injection (SQL/command/XSS) avoided?
+3. **Security.** Untrusted input validated? Authz enforced? Secrets/PII handled? Injection (SQL/command/XSS) avoided? (See the `security-threat-modeling` skill.)
 4. **Design & maintainability.** Right abstraction and boundaries? Will the next engineer understand it? Is complexity justified?
-5. **Tests.** Do tests cover the new behavior and the failure cases — not just the happy path?
+5. **Tests.** Do tests cover the new behavior and the failure cases — not just the happy path? (See the `testing-strategy` skill.)
 6. **Operational.** Logging, metrics, migrations, rollback, performance under real load.
 7. **Style/nits.** Last, and ideally automated by a linter/formatter rather than raised by a human.
 

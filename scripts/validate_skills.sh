@@ -93,6 +93,20 @@ if [[ -f README.md ]]; then
   done < <(grep -oE 'skills/[a-z0-9-]+/SKILL\.md' README.md | sort -u)
 fi
 
+echo "Checking skill cross-references..."
+xref=0
+for f in skills/*/SKILL.md; do
+  src="$(basename "$(dirname "$f")")"
+  while IFS= read -r ref; do
+    [[ -z "$ref" ]] && continue
+    xref=$((xref+1))
+    if [[ ! -d "skills/$ref" ]]; then
+      err "$src: references unknown skill \`$ref\` (no skills/$ref/)"
+    fi
+  done < <(grep -oE '`[a-z0-9-]+` skill' "$f" | sed -E 's/`([a-z0-9-]+)` skill/\1/')
+done
+[[ "$fail" -eq 0 ]] && ok "$xref cross-references all resolve"
+
 echo
 if [[ "$fail" -eq 0 ]]; then
   printf '\033[32mAll skills valid (%d).\033[0m\n' "$found"

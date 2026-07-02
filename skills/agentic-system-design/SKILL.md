@@ -75,7 +75,7 @@ You cannot improve what you cannot measure, and you cannot measure an LLM system
 
 ## Observability
 
-Log the full trace for every request: system prompt, retrieved context, each tool call and result, the model's intermediate decisions, tokens, latency, and cost. When an agent misbehaves in production, the trace is the only way to understand why.
+Log the full trace for every request: system prompt, retrieved context, each tool call and result, the model's intermediate decisions, tokens, latency, and cost. When an agent misbehaves in production, the trace is the only way to understand why. (The general practice is in the `observability-and-slos` skill.)
 
 **Pin and record versions.** Record which model and prompt version served each request. Providers deprecate and silently update models, so you need to correlate any behavior shift to a version — and reproduce it.
 

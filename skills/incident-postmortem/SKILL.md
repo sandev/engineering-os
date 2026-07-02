@@ -34,6 +34,8 @@ When unsure, over-declare — you can always downgrade. Severity drives the resp
 - [ ] Preserve evidence (logs, dashboards, timeline) for the postmortem.
 ```
 
+Good telemetry is what makes detection fast and root cause findable — see the `observability-and-slos` skill; for the diagnosis itself, see the `debugging` skill.
+
 ### Principles
 - **Mitigate with the fastest safe lever** (usually rollback) before hunting root cause.
 - **One source of truth** for status; avoid parallel side-conversations.

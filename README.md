@@ -1,5 +1,8 @@
 # engineering-os
 
+[![Validate skills](https://github.com/sandev/engineering-os/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/sandev/engineering-os/actions/workflows/validate-skills.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Battle-tested engineering playbooks you can read in five minutes — or hand to an
 AI agent to do the work well.
 

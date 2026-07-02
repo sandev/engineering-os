@@ -63,28 +63,33 @@ engineering-os/
 │   ├── workflows/validate-skills.yml
 │   └── pull_request_template.md
 └── skills/                       # the library (tool-neutral source of truth)
-    ├── architecture-decision-records/
+    ├── architecture-decision-records/   # design & architecture
     │   └── SKILL.md
     ├── system-design-review/
     ├── api-design/
-    ├── security-threat-modeling/
     ├── data-modeling/
     ├── caching-strategy/
-    ├── agentic-system-design/
-    ├── technical-design-doc/
+    ├── security-threat-modeling/
+    ├── agentic-system-design/           # AI & agentic systems
+    ├── technical-design-doc/            # building & delivering
     ├── estimation-and-planning/
     ├── testing-strategy/
     ├── code-review/
     ├── debugging/
     ├── technical-writing/
-    ├── observability-and-slos/
+    ├── observability-and-slos/          # operating & reliability
     ├── incident-postmortem/
-    ├── technical-strategy/
+    ├── technical-strategy/              # strategy & communication
     ├── decision-making/
     ├── writing-for-executives/
-    ├── feedback-and-1-1s/
+    ├── feedback-and-1-1s/               # leading people & teams
     ├── delegation/
-    └── interviewing/
+    ├── interviewing/
+    ├── running-effective-meetings/
+    └── agile-ceremonies/
+
+The groups above are a reading aid only; the directory is flat (one folder per
+skill) so tools discover each `skills/<name>/SKILL.md` directly.
 ```
 
 > The repo is vendor-neutral — there are no tool-specific files. Cursor users can

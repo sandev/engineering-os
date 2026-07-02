@@ -39,6 +39,7 @@ Walk each dimension. For each, note strengths, risks, and concrete questions.
 - Data durability, backups, and tested recovery (RPO/RTO).
 
 ### 4. Security & privacy
+(For depth, run the `security-threat-modeling` skill on the design.)
 - AuthN/AuthZ at each boundary. Least privilege.
 - Data classification: what is sensitive? Encryption in transit and at rest.
 - Input validation and trust boundaries. Secrets management.

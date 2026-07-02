@@ -43,6 +43,7 @@ Measure at the boundary the **user** experiences, not just internal component he
 - Every page must be **actionable and urgent** — if the responder can't or needn't do anything now, it's a dashboard, not a page.
 - Prefer **burn-rate alerts** (budget consumed fast) to static threshold noise.
 - Ruthlessly delete alerts that don't lead to action; alert fatigue causes missed incidents.
+- When an alert fires, it feeds incident response and postmortems — see the `incident-postmortem` skill.
 
 ## Quality bar
 

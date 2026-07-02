@@ -4,7 +4,7 @@
 # Run locally before opening a PR: ./scripts/validate_skills.sh
 # CI runs the same script, so a green local run means a green CI.
 #
-# Checks per skill (skills/<name>/SKILL.md):
+# Checks per skill (skills/<group>/<name>/SKILL.md):
 #   - SKILL.md exists
 #   - frontmatter has `name` and `description`
 #   - `name` is kebab-case, <= 64 chars, and matches the folder name
@@ -12,6 +12,7 @@
 #   - body is <= 500 lines
 # Repo-wide:
 #   - every skills/.../SKILL.md linked from README.md exists
+#   - every "`<name>` skill" cross-reference points to a real skill
 
 set -uo pipefail
 
@@ -36,7 +37,7 @@ frontmatter_value() {
 echo "Validating skills..."
 shopt -s nullglob
 found=0
-for dir in skills/*/; do
+for dir in skills/*/*/; do
   name_dir="$(basename "$dir")"
   file="${dir}SKILL.md"
   found=$((found+1))
@@ -90,18 +91,18 @@ if [[ -f README.md ]]; then
     else
       err "README links missing file: $path"
     fi
-  done < <(grep -oE 'skills/[a-z0-9-]+/SKILL\.md' README.md | sort -u)
+  done < <(grep -oE 'skills/[a-z0-9-]+/[a-z0-9-]+/SKILL\.md' README.md | sort -u)
 fi
 
 echo "Checking skill cross-references..."
 xref=0
-for f in skills/*/SKILL.md; do
+for f in skills/*/*/SKILL.md; do
   src="$(basename "$(dirname "$f")")"
   while IFS= read -r ref; do
     [[ -z "$ref" ]] && continue
     xref=$((xref+1))
-    if [[ ! -d "skills/$ref" ]]; then
-      err "$src: references unknown skill \`$ref\` (no skills/$ref/)"
+    if ! ls -d skills/*/"$ref"/ >/dev/null 2>&1; then
+      err "$src: references unknown skill \`$ref\` (no skills/*/$ref/)"
     fi
   done < <(grep -oE '`[a-z0-9-]+` skill' "$f" | sed -E 's/`([a-z0-9-]+)` skill/\1/')
 done

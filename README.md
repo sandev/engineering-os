@@ -16,61 +16,60 @@ reading it or any LLM you paste it into.
 
 ## The skills
 
-Grouped by what you're doing. The `skills/` directory itself stays flat (one
-folder per skill) so tools can discover them — these groups are just a map.
+Grouped by what you're doing — each group is a subfolder of `skills/`.
 
 ### Design & architecture
 
 | Skill | Use it when you need to… |
 |-------|--------------------------|
-| [architecture-decision-records](skills/architecture-decision-records/SKILL.md) | Write down a big, hard-to-reverse decision so people understand it later |
-| [system-design-review](skills/system-design-review/SKILL.md) | Pressure-test a system design before you build it |
-| [api-design](skills/api-design/SKILL.md) | Design or review an API/contract that's clear and hard to misuse |
-| [data-modeling](skills/data-modeling/SKILL.md) | Design a schema that fits access patterns and stays correct at scale |
-| [caching-strategy](skills/caching-strategy/SKILL.md) | Add caching that speeds things up without serving stale or wrong data |
-| [security-threat-modeling](skills/security-threat-modeling/SKILL.md) | Find what could go wrong security-wise before attackers do |
+| [architecture-decision-records](skills/design-and-architecture/architecture-decision-records/SKILL.md) | Write down a big, hard-to-reverse decision so people understand it later |
+| [system-design-review](skills/design-and-architecture/system-design-review/SKILL.md) | Pressure-test a system design before you build it |
+| [api-design](skills/design-and-architecture/api-design/SKILL.md) | Design or review an API/contract that's clear and hard to misuse |
+| [data-modeling](skills/design-and-architecture/data-modeling/SKILL.md) | Design a schema that fits access patterns and stays correct at scale |
+| [caching-strategy](skills/design-and-architecture/caching-strategy/SKILL.md) | Add caching that speeds things up without serving stale or wrong data |
+| [security-threat-modeling](skills/design-and-architecture/security-threat-modeling/SKILL.md) | Find what could go wrong security-wise before attackers do |
 
 ### AI & agentic systems
 
 | Skill | Use it when you need to… |
 |-------|--------------------------|
-| [agentic-system-design](skills/agentic-system-design/SKILL.md) | Build an LLM/agent feature that's actually reliable, not just a demo |
+| [agentic-system-design](skills/ai-and-agentic-systems/agentic-system-design/SKILL.md) | Build an LLM/agent feature that's actually reliable, not just a demo |
 
 ### Building & delivering
 
 | Skill | Use it when you need to… |
 |-------|--------------------------|
-| [technical-design-doc](skills/technical-design-doc/SKILL.md) | Plan a non-trivial project and get aligned (RFC / design doc) |
-| [estimation-and-planning](skills/estimation-and-planning/SKILL.md) | Size work honestly and turn it into a credible, sequenced plan |
-| [testing-strategy](skills/testing-strategy/SKILL.md) | Decide what to test and at which level so tests catch real defects |
-| [code-review](skills/code-review/SKILL.md) | Review a pull request with high signal and less nitpicking |
-| [debugging](skills/debugging/SKILL.md) | Find a bug's root cause systematically instead of guessing |
-| [technical-writing](skills/technical-writing/SKILL.md) | Write docs and READMEs organized around what the reader needs to do |
+| [technical-design-doc](skills/building-and-delivering/technical-design-doc/SKILL.md) | Plan a non-trivial project and get aligned (RFC / design doc) |
+| [estimation-and-planning](skills/building-and-delivering/estimation-and-planning/SKILL.md) | Size work honestly and turn it into a credible, sequenced plan |
+| [testing-strategy](skills/building-and-delivering/testing-strategy/SKILL.md) | Decide what to test and at which level so tests catch real defects |
+| [code-review](skills/building-and-delivering/code-review/SKILL.md) | Review a pull request with high signal and less nitpicking |
+| [debugging](skills/building-and-delivering/debugging/SKILL.md) | Find a bug's root cause systematically instead of guessing |
+| [technical-writing](skills/building-and-delivering/technical-writing/SKILL.md) | Write docs and READMEs organized around what the reader needs to do |
 
 ### Operating & reliability
 
 | Skill | Use it when you need to… |
 |-------|--------------------------|
-| [observability-and-slos](skills/observability-and-slos/SKILL.md) | Instrument a system and set reliability targets that alert on real user pain |
-| [incident-postmortem](skills/incident-postmortem/SKILL.md) | Run an incident and write a blameless postmortem that sticks |
+| [observability-and-slos](skills/operating-and-reliability/observability-and-slos/SKILL.md) | Instrument a system and set reliability targets that alert on real user pain |
+| [incident-postmortem](skills/operating-and-reliability/incident-postmortem/SKILL.md) | Run an incident and write a blameless postmortem that sticks |
 
 ### Strategy & communication
 
 | Skill | Use it when you need to… |
 |-------|--------------------------|
-| [technical-strategy](skills/technical-strategy/SKILL.md) | Set technical direction and decide what to build, fix, or defer |
-| [decision-making](skills/decision-making/SKILL.md) | Make and drive a decision under uncertainty without stalling |
-| [writing-for-executives](skills/writing-for-executives/SKILL.md) | Explain a technical decision to leadership without losing them |
+| [technical-strategy](skills/strategy-and-communication/technical-strategy/SKILL.md) | Set technical direction and decide what to build, fix, or defer |
+| [decision-making](skills/strategy-and-communication/decision-making/SKILL.md) | Make and drive a decision under uncertainty without stalling |
+| [writing-for-executives](skills/strategy-and-communication/writing-for-executives/SKILL.md) | Explain a technical decision to leadership without losing them |
 
 ### Leading people & teams
 
 | Skill | Use it when you need to… |
 |-------|--------------------------|
-| [feedback-and-1-1s](skills/feedback-and-1-1s/SKILL.md) | Give clear, kind feedback and run 1:1s that build trust and growth |
-| [delegation](skills/delegation/SKILL.md) | Hand off work so it's done well and people grow — without micromanaging |
-| [interviewing](skills/interviewing/SKILL.md) | Run structured interviews that produce real hiring signal, fairly |
-| [running-effective-meetings](skills/running-effective-meetings/SKILL.md) | Run a meeting (all-hands, decision, review) that's worth the time — or skip it |
-| [agile-ceremonies](skills/agile-ceremonies/SKILL.md) | Make standups, planning, demos, and retros create value, not ritual |
+| [feedback-and-1-1s](skills/leading-people-and-teams/feedback-and-1-1s/SKILL.md) | Give clear, kind feedback and run 1:1s that build trust and growth |
+| [delegation](skills/leading-people-and-teams/delegation/SKILL.md) | Hand off work so it's done well and people grow — without micromanaging |
+| [interviewing](skills/leading-people-and-teams/interviewing/SKILL.md) | Run structured interviews that produce real hiring signal, fairly |
+| [running-effective-meetings](skills/leading-people-and-teams/running-effective-meetings/SKILL.md) | Run a meeting (all-hands, decision, review) that's worth the time — or skip it |
+| [agile-ceremonies](skills/leading-people-and-teams/agile-ceremonies/SKILL.md) | Make standups, planning, demos, and retros create value, not ritual |
 
 ## How to use it
 
@@ -92,7 +91,7 @@ Pick whatever fits how you work:
 ```bash
 git clone https://github.com/sandev/engineering-os.git
 cd engineering-os
-# open skills/code-review/SKILL.md, or paste it into your favorite AI and say
+# open skills/building-and-delivering/code-review/SKILL.md, or paste it into an AI and say
 # "review this diff using this skill"
 ```
 

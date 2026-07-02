@@ -31,8 +31,8 @@ Pick whatever fits how you work:
 - **Any AI chat (ChatGPT, Claude, Gemini, …):** paste the relevant `SKILL.md`
   into the chat, then ask your question. The skill becomes focused instructions
   for that task.
-- **Cursor:** the skills auto-load (`.cursor/skills/` points at `skills/`), so
-  asking *"review this system design"* pulls in the right one.
+- **Cursor:** run `ln -s ../skills .cursor/skills` once, then the skills
+  auto-load and asking *"review this system design"* pulls in the right one.
 - **Claude / Agent Skills tools:** point them at the `skills/` folder — the
   frontmatter format matches.
 - **Your own agent:** index `skills/`, route on each skill's `description`, load

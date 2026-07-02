@@ -34,9 +34,10 @@ The format is deliberately portable. Pick whatever matches your tool:
 - **Any LLM chat (ChatGPT, Claude, Gemini, etc.):** paste the relevant
   `SKILL.md` into the conversation, then ask your question. The skill acts as
   focused instructions for that task.
-- **Cursor:** skills are auto-discovered from `.cursor/skills/` (a symlink to
-  `skills/`), so asking something like *"review this system design"* activates
-  the matching skill automatically.
+- **Cursor:** Cursor auto-discovers skills from `.cursor/skills/`. Create a
+  one-time symlink so it picks these up without duplicating anything:
+  `ln -s ../skills .cursor/skills`. Then asking *"review this system design"*
+  activates the matching skill automatically.
 - **Claude / Agent Skills–compatible tools:** the `name` + `description`
   frontmatter matches the Agent Skills format; point the tool at `skills/`.
 - **Custom agents / RAG:** index the `skills/` directory. Route on the
@@ -56,18 +57,19 @@ engineering-os/
 ├── AGENTS.md                     # you are here — contributor + usage guide
 ├── README.md                     # what this is + the skill catalog
 ├── LICENSE
-├── skills/                       # the library (tool-neutral source of truth)
-│   ├── architecture-decision-records/
-│   │   └── SKILL.md
-│   ├── system-design-review/
-│   ├── agentic-system-design/
-│   ├── technical-design-doc/
-│   ├── code-review/
-│   ├── incident-postmortem/
-│   └── writing-for-executives/
-└── .cursor/
-    └── skills -> ../skills       # symlink so Cursor auto-loads the same files
+└── skills/                       # the library (tool-neutral source of truth)
+    ├── architecture-decision-records/
+    │   └── SKILL.md
+    ├── system-design-review/
+    ├── agentic-system-design/
+    ├── technical-design-doc/
+    ├── code-review/
+    ├── incident-postmortem/
+    └── writing-for-executives/
 ```
+
+> The repo is vendor-neutral — there are no tool-specific files. Cursor users can
+> opt in with a single symlink (see [Using these skills](#using-these-skills)).
 
 Each skill is a directory with a required `SKILL.md`, plus optional
 `reference.md`, `examples.md`, or a `scripts/` folder for anything the main file

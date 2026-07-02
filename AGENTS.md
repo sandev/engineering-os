@@ -57,6 +57,11 @@ engineering-os/
 ├── AGENTS.md                     # you are here — contributor + usage guide
 ├── README.md                     # what this is + the skill catalog
 ├── LICENSE
+├── scripts/
+│   └── validate_skills.sh        # quality-bar checks (run locally + in CI)
+├── .github/
+│   ├── workflows/validate-skills.yml
+│   └── pull_request_template.md
 └── skills/                       # the library (tool-neutral source of truth)
     ├── architecture-decision-records/
     │   └── SKILL.md
@@ -163,7 +168,7 @@ discoverable. Write it like the existing skills: `"<what it does>. Use when
 - [ ] 4. Keep the body under ~500 lines; link a reference.md for depth.
 - [ ] 5. Add the skill to the catalog table in README.md.
 - [ ] 6. Self-review against "What makes a good skill" and the PR checklist.
-- [ ] 7. Open a PR.
+- [ ] 7. Run `./scripts/validate_skills.sh`, then open a PR (see below).
 ```
 
 ## Editing an existing skill
@@ -172,6 +177,27 @@ Improvements are very welcome — sharper checklists, better examples, a missing
 anti-pattern. Keep edits in the established voice and structure. If you're
 changing the *meaning* of guidance (not just clarifying), explain the reasoning
 in your PR so reviewers can weigh it.
+
+---
+
+## Submitting a change (branch → PR → merge)
+
+We don't commit to `main` directly — every change goes through a PR so it gets
+review and passes CI.
+
+```bash
+git checkout -b <type>/<short-name>     # e.g. skill/testing-strategy, fix/adr-typo
+# ...make your change...
+./scripts/validate_skills.sh            # must pass before you push
+git commit -am "Concise, why-focused message"
+git push -u origin HEAD
+gh pr create                            # fill in the PR template
+```
+
+CI (`.github/workflows/validate-skills.yml`) runs the same
+`validate_skills.sh` on every PR: it checks frontmatter, that each `name`
+matches its folder, the 500-line limit, and that README links resolve. A green
+local run means a green CI. Merge once CI passes and a reviewer approves.
 
 ---
 
@@ -184,6 +210,7 @@ in your PR so reviewers can weigh it.
 - [ ] Includes actionable structure (checklist / template / quality bar) and an anti-patterns section
 - [ ] README catalog updated if you added a skill
 - [ ] Cross-links to related skills use the exact skill name
+- [ ] `./scripts/validate_skills.sh` passes locally
 
 **PR description:** state what the skill/change is, who it's for, and why the
 guidance is sound (experience, sources, or precedent). We review for accuracy,
